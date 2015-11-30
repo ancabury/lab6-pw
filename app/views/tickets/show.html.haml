@@ -1,0 +1,14 @@
+.ticket
+  .row
+    %h1.show-name=@ticket.show.name
+  .row
+    %h2.name=@ticket.user_name
+  .row
+    %p.seat= "Seat: #{@ticket.seat.row} / #{@ticket.seat.place}"
+  .row
+    %span.code="Ticket code: #{@ticket.id}"
+    .barcode
+      %img{:alt => "barcode", :src => "http://freebarcodefonts.dobsonsw.com/images/code128bar.jpg"}/
+%br/
+%br/
+%button{:onclick => "window.print();", :type => "button"} Print ticket

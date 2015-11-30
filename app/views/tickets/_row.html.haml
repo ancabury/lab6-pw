@@ -1,0 +1,7 @@
+%tr
+  %td.row-number=row
+  - (1..10).each do |i|
+    - if(i == 5)
+      %td.center
+    - else
+      %td.available
